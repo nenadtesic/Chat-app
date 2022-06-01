@@ -1,0 +1,16 @@
+{
+  "messages": [
+    {
+      "id": "1",
+      "username": "Pera",
+      "message": "Prva poruka",
+      "time": "16:24:43"
+    },
+    {
+      "id": "2",
+      "username": "Mika",
+      "message": "Tekst druge poruke",
+      "time": "15:26:48"
+    }
+  ]
+}
