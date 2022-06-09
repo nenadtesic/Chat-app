@@ -28,7 +28,7 @@ const Form = ({setMessages}) => {
             
             <p>Ulogovani korisnik: <span style={{textDecoration: 'underline'}}>{username}</span></p>
 
-            <textarea onChange={e=>{setMessageText(e.target.value)}} cols="40" rows='4' placeholder="...message text" />
+            <textarea value={messageText} onChange={e=>{setMessageText(e.target.value)}} cols="40" rows='4' placeholder="...message text" />
             <p style={{color: 'red'}}>{errors[1] ? errorMessages[1] : ''}</p>
             <p style={{color: 'red'}}>{errors[2] ? errorMessages[2] : ''}</p>
 
@@ -54,6 +54,8 @@ const Form = ({setMessages}) => {
                 postMessage(newMessage).then(res => {
                     setMessages(prev => [...prev, res.data])
                 })
+
+                setMessageText('')
 
             }}>Send Message</button>
         </div>
